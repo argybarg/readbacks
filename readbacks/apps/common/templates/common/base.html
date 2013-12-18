@@ -1,0 +1,13 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>{% block head_title %}{% endblock %}</title>
+        {% block add_header_content %}{% endblock %}
+    <head>
+
+    <body>
+        {% block main_content %}{% endblock %}
+        {% block footer_javascript %}{% endblock %}
+    </body>
+
+</html>

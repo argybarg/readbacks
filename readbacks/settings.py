@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     # project apps
     'readbacks.apps.home',
     'readbacks.apps.reader',
+    'readbacks.apps.common',
 
 )
 
