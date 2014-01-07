@@ -64,7 +64,8 @@ WSGI_APPLICATION = 'readbacks.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),          	#ASK Alex about creating
+        														#db for this project
     }
 }
 
@@ -73,9 +74,11 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Los_Angeles'								
 
-USE_I18N = True
+USE_I18N = True    												#ASK Alex if we should optimize
+																#by setting some of these to 'false'
+																#esp. the 1st one (internationalization)
 
 USE_L10N = True
 
@@ -90,7 +93,8 @@ STATIC_URL = '/static/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")					#ASK Alex if these are intentional settings or defaults.
+																#Also to explain 'join' in context of paths!
 
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
