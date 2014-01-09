@@ -5,6 +5,6 @@ urlpatterns = patterns('',
     url(
         r'^unit/$',
         TemplateView.as_view(template_name="reader/unit.html"),
-        name="home"
+        name="unit"
     )
 )
