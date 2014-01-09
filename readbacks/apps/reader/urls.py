@@ -8,9 +8,13 @@ urlpatterns = patterns('',
         name='grades'
     ),
     url(
-        r'^unit/$',
-        TemplateView.as_view(template_name='reader/unit.html'),
-        name='unit'
+        r'^passages/$',
+        TemplateView.as_view(template_name='reader/passages.html'),
+        name='passages'
+    ),
+    url(
+        r'^units/$',
+        TemplateView.as_view(template_name='reader/units.html'),
+        name='units'
     )
-
 )
