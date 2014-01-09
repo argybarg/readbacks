@@ -3,8 +3,14 @@ from django.views.generic import TemplateView
 
 urlpatterns = patterns('',
     url(
+        r'^$',
+        TemplateView.as_view(template_name='reader/grades.html'),
+        name='grades'
+    ),
+    url(
         r'^unit/$',
-        TemplateView.as_view(template_name="reader/unit.html"),
-        name="unit"
+        TemplateView.as_view(template_name='reader/unit.html'),
+        name='unit'
     )
+
 )

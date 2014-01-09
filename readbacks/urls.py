@@ -7,6 +7,5 @@ urlpatterns = patterns(
     '',
     url(r'^', include('readbacks.apps.home.urls')),
     url(r'^reader/', include('readbacks.apps.reader.urls')),
-
     url(r'^admin/', include(admin.site.urls)),
 )
