@@ -1,12 +1,9 @@
-<!doctype html>
-
 {% extends 'common/base.html' %}
 
+{% block head %}
 
-{% block head_title %}Gradepage{% endblock %}
-<html>
 <head>
-  <title>Cats: Purring Pets, Passage A</title>
+  {% block head_title %}Cats: Purring Pets, Passage 1{% endblock %}
   <link type="text/css" href="skin/jplayer.pink.flag.css" rel="stylesheet" />
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
@@ -27,12 +24,11 @@
     });
   </script>
 </head>
-</html>
-{% block main_content %}
+{% endblock %}
 
+{% block main_content %}
 <body>
-<html>
-  <h1>Cats: Purring Pets, Passage A</h1>
+  <h1>Cats: Purring Pets, Passage 1</h1>
   <p>Cats are good pets. Like all pets, they need special care. Cats need food and water every day. Cats are meat eaters. They must have meat every day. Give your cat food made from beef, chicken, or fish. Cats do not need to drink milk. Give your cat fresh water.</p>
   <hr>
 <br>
@@ -77,7 +73,6 @@
     </div>
   </div>
 </body>
-</html>
 {% endblock %}
 
 

@@ -55,7 +55,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'readbacks.urls'
 
-WSGI_APPLICATION = 'readbacks.wsgi.application'
+WSGI_APPLICATION = 'readbacks.wsgi.application'                 #WHAT IS THIS? Ask Alex...
 
 
 # Database
@@ -64,8 +64,7 @@ WSGI_APPLICATION = 'readbacks.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),          	#ASK Alex about creating
-        														#db for this project
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),          	#ASK Alex about creating db for this project
     }
 }
 
@@ -76,9 +75,8 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'America/Los_Angeles'								
 
-USE_I18N = True    												#ASK Alex if we should optimize
-																#by setting some of these to 'false'
-																#esp. the 1st one (internationalization)
+USE_I18N = True    												#ASK Alex if we should optimize by setting some of these to 'false'
+																          #esp. the 1st one (internationalization)
 
 USE_L10N = True
 
@@ -93,9 +91,7 @@ STATIC_URL = '/static/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "static")					#ASK Alex if these are intentional settings or defaults.
-																#Also to explain 'join' in context of paths!
-
+STATIC_ROOT = os.path.join(BASE_DIR, "static")					
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.

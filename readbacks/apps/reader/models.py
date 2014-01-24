@@ -1,24 +1,57 @@
 from django.db import models
 
 class Grade(models.Model):
-    name = models.CharField(max_length=30)
+    grade = models.CharField(max_length=10)
+
+    def __unicode__(self):
+        return '%s' % self.grade
+
+    #class Admin: pass
 
 
-class Publisher(models.Model):
-    name = models.CharField(max_length=30)
-    address = models.CharField(max_length=50)
-    city = models.CharField(max_length=60)
-    state_province = models.CharField(max_length=30)
-    country = models.CharField(max_length=50)
-    website = models.URLField()
+class Unit(models.Model):
+    grade = models.ForeignKey(Grade)
+    name = models.CharField(max_length=50)
 
-class Author(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=40)
-    email = models.EmailField()
+    def __unicode__(self):
+        return '%s' % self.name
 
-class Book(models.Model):
-    title = models.CharField(max_length=100)
-    authors = models.ManyToManyField(Author)
-    publisher = models.ForeignKey(Publisher)
-    publication_date = models.DateField()
+    #class Admin: pass
+
+
+class Reading(models.Model):
+    unit = models.ForeignKey(Unit)
+    name = models.CharField(max_length=100)
+
+    def __unicode__(self):
+        return '%s' % self.name
+
+    #class Admin: pass
+
+
+class Paragraph(models.Model):
+    reading = models.ForeignKey(Reading)
+    text = models.CharField(max_length=1000)        #each paragraph has multiple passages...           
+    mp3 = models.FilePathField(path="/media/", blank=True, null=True)              #as per MEDIA_URL in settings.py
+
+    def __unicode__(self):
+        return '%s' % self.text                            #  truncate later?  maybe id number would be better? subl won't let me do that!!
+
+    #class Admin: pass
+
+
+
+#Alternate model below. Might it be simpler just to have everything in one table? 
+#Or will that impact efficiency?
+"""
+class Alternate(models.Model):
+    grade = models.CharField(max_length=10)
+    unit_name = models.CharField(max_length=50)
+    reading_title = models.CharField(max_length=100)
+    passage_text = models.CharField(max_length=1000)        #each paragraph has multiple passages...           
+    passage_num = models.CharField(max_length=20)           #indicates individual passage...
+    mp3 = models.FilePathField(path="/media/")
+
+    def __str__(self):
+        return self.reading_title, self.passage_num
+"""

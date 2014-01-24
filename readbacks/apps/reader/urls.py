@@ -21,6 +21,10 @@ urlpatterns = patterns('',
         r'^paragraph/$',
         TemplateView.as_view(template_name='reader/paragraph.html'),
         name='paragraph'
-    )
-    
+    ),
+    url(
+        r'^sample/$',
+        TemplateView.as_view(template_name='reader/sample.html'),
+        name='sample'
+    ),   
 )
