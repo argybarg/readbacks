@@ -6,10 +6,30 @@ from readbacks.apps.reader.views import UnitsView, ReadingsView, ParagraphsView
 #  Do we change templateview to listview as seen in 2nd video?
 #  (see url listview.as_view commented out below)     
 #  NEXT ADD IN CODE in grades.html file for PAGINATION?
+
+
+"""
+/
+
+/reader/grade/<grade_level>/unit/<unit_slug>/reading/<reading_slug>/paragraph/<code>
+
+/reader
+
+/reader/grade/<grade_level>/ =>  units list
+
+
+/reader/grade/<grade_level>/unit/<unit_slug>/  readings list
+
+/reader/grade/<grade_level>/unit/<unit_slug>/reading/<reading_slug>/  paragraph list
+
+"""
+
+
+
 urlpatterns = patterns('',
     
     url(
-        r'^grades/$',
+        r'^/$',
         ListView.as_view(
             model=Grade,
             context_object_name='grades',

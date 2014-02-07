@@ -1,0 +1,154 @@
+[
+{
+    "pk": 1, 
+    "model": "reader.grade", 
+    "fields": {
+        "level": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "reader.grade", 
+    "fields": {
+        "level": 2
+    }
+},
+{
+    "pk": 3, 
+    "model": "reader.grade", 
+    "fields": {
+        "level": 3
+    }
+},
+{
+    "pk": 4, 
+    "model": "reader.grade", 
+    "fields": {
+        "level": 4
+    }
+},
+{
+    "pk": 5, 
+    "model": "reader.grade", 
+    "fields": {
+        "level": 5
+    }
+},
+{
+    "pk": 1, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 1, 
+        "name": "Pets", 
+        "slug": "pets"
+    }
+},
+{
+    "pk": 2, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 1, 
+        "name": "The Sky", 
+        "slug": "the-sky"
+    }
+},
+{
+    "pk": 3, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 1, 
+        "name": "Safety", 
+        "slug": "safety"
+    }
+},
+{
+    "pk": 4, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 2, 
+        "name": "Quantum Thermodynamics", 
+        "slug": "quantum-thermodynamics"
+    }
+},
+{
+    "pk": 1, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Pets: Helpful Pals", 
+        "unit": 1, 
+        "slug": "pets-helpful-pals"
+    }
+},
+{
+    "pk": 2, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Dogs: Barking Buddies", 
+        "unit": 1, 
+        "slug": "dogs-barking-buddies"
+    }
+},
+{
+    "pk": 3, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Cats: Purring Pets", 
+        "unit": 1, 
+        "slug": "cats-purring-pets"
+    }
+},
+{
+    "pk": 4, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Birds: Flying Pets", 
+        "unit": 1, 
+        "slug": "birds-flying-pets"
+    }
+},
+{
+    "pk": 5, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Fish: Water Pets", 
+        "unit": 1, 
+        "slug": "fish-water-pets"
+    }
+},
+{
+    "pk": 1, 
+    "model": "reader.paragraph", 
+    "fields": {
+        "text": "Play with your cat every day. Playing keeps them from getting bored. It is also good exercise. Remember to take your cat to the vet for check-ups. A healthy cat will have a long life.", 
+        "reading": 3, 
+        "mp3": ""
+    }
+},
+{
+    "pk": 2, 
+    "model": "reader.paragraph", 
+    "fields": {
+        "text": "Cats use litter boxes. You need to keep your eat's litter box clean. It must be cleaned at least once a day. Cats like clean litter boxes.", 
+        "reading": 3, 
+        "mp3": ""
+    }
+},
+{
+    "pk": 3, 
+    "model": "reader.paragraph", 
+    "fields": {
+        "text": "Cats need a safe place to live. Cats that live indoors are safer than cats that live outdoors. If you let your cat outside, be sure it is in the daytime. At night, wild animals can attack a cat.", 
+        "reading": 3, 
+        "mp3": ""
+    }
+},
+{
+    "pk": 4, 
+    "model": "reader.paragraph", 
+    "fields": {
+        "text": "Cats are good pets. Like all pets they need special care. Cats need food and water every day. Cats are meat eaters. They must have meat everyday. Give your cat food made from beef chicken or fish. Cats do not need to drink milk. Give your cat fresh water. ", 
+        "reading": 3, 
+        "mp3": ""
+    }
+}
+]
