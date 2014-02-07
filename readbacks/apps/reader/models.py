@@ -11,31 +11,31 @@ class Grade(models.Model):
 
 class Unit(models.Model):
     grade = models.ForeignKey(Grade)
-    name = models.CharField(max_length=50)
+    unit = models.CharField(max_length=50)
 
     def __unicode__(self):
-        return '%s' % self.name
+        return '%s' % self.unit
 
     #class Admin: pass
 
 
 class Reading(models.Model):
     unit = models.ForeignKey(Unit)
-    name = models.CharField(max_length=100)
+    reading = models.CharField(max_length=100)
 
     def __unicode__(self):
-        return '%s' % self.name
+        return '%s' % self.reading
 
     #class Admin: pass
 
 
 class Paragraph(models.Model):
     reading = models.ForeignKey(Reading)
-    text = models.CharField(max_length=1000)        #each paragraph has multiple passages...           
+    paragraph = models.CharField(max_length=1000)                  
     mp3 = models.FilePathField(path="/media/", blank=True, null=True)              #as per MEDIA_URL in settings.py
 
     def __unicode__(self):
-        return '%s' % self.text                            #  truncate later?  maybe id number would be better? subl won't let me do that!!
+        return '%s' % self.paragraph                            #  truncate later?  maybe id number would be better? subl won't let me do that!!
 
     #class Admin: pass
 

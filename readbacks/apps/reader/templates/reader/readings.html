@@ -1,16 +1,17 @@
 {% extends 'common/base.html' %}
 
-{% block head_title %}Units{% endblock %}
+{% block head_title %}Readings{% endblock %}
 
 {% block main_content %}
 
-	<h1>Reading: Pets</h1>
-	
-	<p>Pets: Helpful Pals</p>
-	<p>Dogs: Barking Buddies</p>
-	<p><a href="{% url 'paragraph' %}">Cats: Purring Pets</a></p>
-	<p>Birds: Flying Pets</p>
-	<p>Fish: Water Pets</p>
+	<h1>Readings for Pets</h1>
+
+	<ul>
+		{% for reading in readings %}
+			<li><a href="{% url 'paragraphs' reading %}"> {{ reading }}</a></li>
+
+		{% endfor %}
+	</ul>
 
 {% endblock %}
 

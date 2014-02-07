@@ -1,17 +1,18 @@
 {% extends 'common/base.html' %}
 
-{% block head_title %}Gradepage{% endblock %}
+{% block head_title %}Units{% endblock %}
 
 {% block main_content %}
 
-<h1>Units for Grade 1</h1>
+	<h1>Units for Grade 1</h1>
 
-<h1><a href="{% url 'readings' %}">Pets</a>
+	<ul>
+		{% for unit in units %}
+			<li><a href="{% url 'readings' %}"> {{ unit }}</a></li>
 
-<h1>Insects<h1>
-<h1>Exercise</h1>
-<h1>Safety</h1>
-<h1>The Sky</h1>
+		{% endfor %}
+	</ul>
+
 
 
 {% endblock %}

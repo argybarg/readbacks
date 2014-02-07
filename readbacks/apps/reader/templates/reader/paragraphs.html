@@ -1,0 +1,19 @@
+{% extends 'common/base.html' %}
+
+{% block head_title %}Paragraphs{% endblock %}
+
+{% block main_content %}
+
+	<h1>Paragraphs for Cats: Purring Pets</h1>
+
+	<ul>
+		{% for paragraph in paragraphs %}
+			<li><a href="{% url 'sample' paragraph %}"> {{ paragraph }}</a></li>
+
+		{% endfor %}
+	</ul>
+
+
+{% endblock %}
+
+
