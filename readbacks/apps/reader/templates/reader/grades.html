@@ -4,13 +4,13 @@
 
 {% block main_content %}
 
-	<h1><center>What grade are you in?</center></h1>
-	<ul>
-		{% for grade in grades %}
-			<li><a href="{% url 'units' grade %}"> {{ grade }}</a></li>
+<h1><center>What grade are you in?</center></h1>
+<ul>
+	{% for grade in grades %}
+		<li><a href="{% url 'units' grade.pk %}"> {{ grade }}</a></li>
 
-		{% endfor %}
-	</ul>
+	{% endfor %}
+</ul>
 
 {% endblock %}
 

@@ -3,8 +3,10 @@ from django.views.generic import TemplateView, ListView
 from readbacks.apps.reader.models import Grade, Unit, Reading, Paragraph
 from readbacks.apps.reader.views import UnitsView, ReadingsView, ParagraphsView
 
+#  Do we change templateview to listview as seen in 2nd video?
+#  (see url listview.as_view commented out below)     
+#  NEXT ADD IN CODE in grades.html file for PAGINATION?
 urlpatterns = patterns('',
-    #Shouldn't the urlconf below bring up the front page (as opposed to the 'grades' page?)
     
     url(
         r'^grades/$',
@@ -16,9 +18,6 @@ urlpatterns = patterns('',
         name='grades'
     ),
     
-
-    #url(r'^grades/$', GradesView.as_view(), name='grades'),
-
     url(r'^units/(?P<pk>\d+)$', UnitsView.as_view(), name='units'),
 
     url(r'^readings/(?P<pk>\d+)$', ReadingsView.as_view(), name='readings'),
