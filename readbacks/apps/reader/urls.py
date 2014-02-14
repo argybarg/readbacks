@@ -24,12 +24,11 @@ from readbacks.apps.reader.views import UnitsView, ReadingsView, ParagraphsView
 
 """
 
+urlpatterns = patterns(
+    '',
 
-
-urlpatterns = patterns('',
-    
     url(
-        r'^/$',
+        r'^$',
         ListView.as_view(
             model=Grade,
             context_object_name='grades',
@@ -37,7 +36,7 @@ urlpatterns = patterns('',
         ),
         name='grades'
     ),
-    
+
     url(r'^units/(?P<pk>\d+)$', UnitsView.as_view(), name='units'),
 
     url(r'^readings/(?P<category_slug>[-\w]+)$', ReadingsView.as_view(), name='readings'),
