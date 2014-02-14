@@ -37,7 +37,11 @@ urlpatterns = patterns(
         name='grades'
     ),
 
-    url(r'^units/(?P<pk>\d+)$', UnitsView.as_view(), name='units'),
+    url(
+        r'^grade/(?P<grade_level>\d+)$',
+        UnitsView.as_view(),
+        name='units'
+    ),
 
     url(r'^readings/(?P<category_slug>[-\w]+)$', ReadingsView.as_view(), name='readings'),
     
