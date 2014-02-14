@@ -23,7 +23,7 @@ class Unit(models.Model):
         unique_together = ('name', 'grade')
 
     def __unicode__(self):
-        return '%s, %s' % (self.grade, self.name)
+        return '%s %s' % (self.grade, self.name)
 
 
 class Reading(models.Model):

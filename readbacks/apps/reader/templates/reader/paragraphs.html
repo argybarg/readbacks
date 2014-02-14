@@ -8,7 +8,7 @@
 
 	<ul>
 		{% for paragraph in paragraphs %}
-			<li><a href="{% url 'sample' paragraph %}"> {{ paragraph }}</a></li>
+			<li><a href="{% url 'sample' paragraph.pk %}"> {{ paragraph.text }}</a></li>
 
 		{% endfor %}
 	</ul>

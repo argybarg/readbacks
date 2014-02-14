@@ -40,9 +40,9 @@ urlpatterns = patterns('',
     
     url(r'^units/(?P<pk>\d+)$', UnitsView.as_view(), name='units'),
 
-    url(r'^readings/(?P<pk>\d+)$', ReadingsView.as_view(), name='readings'),
+    url(r'^readings/(?P<category_slug>[-\w]+)$', ReadingsView.as_view(), name='readings'),
     
-    url(r'^paragraph/(?P<pk>\d+)$', ParagraphsView.as_view(), name='paragraphs'),
+    url(r'^paragraph/(?P<category_slug>[-\w]+)$', ParagraphsView.as_view(), name='paragraphs'),
 
     url(
         r'^sample/(?P<pk>\d+)$',

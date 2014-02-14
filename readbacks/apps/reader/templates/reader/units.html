@@ -4,11 +4,11 @@
 
 {% block main_content %}
 
-	<h1>Units for Grade 1</h1>
+	<h1>Units for Grade {{ grade }}</h1>
 
 	<ul>
 		{% for unit in units %}
-			<li><a href="{% url 'readings' %}"> {{ unit }}</a></li>
+			<li><a href="{% url 'readings' unit.slug %}"> {{ unit }}</a></li>
 
 		{% endfor %}
 	</ul>

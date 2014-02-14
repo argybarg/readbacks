@@ -8,7 +8,7 @@
 
 	<ul>
 		{% for reading in readings %}
-			<li><a href="{% url 'paragraphs' reading %}"> {{ reading }}</a></li>
+			<li><a href="{% url 'paragraphs' reading.pk %}"> {{ reading }}</a></li>
 
 		{% endfor %}
 	</ul>
