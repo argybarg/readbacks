@@ -15,7 +15,7 @@ from readbacks.apps.reader.views import UnitsView, ReadingsView, ParagraphsView
 
 /reader
 
-/reader/grade/<grade_level>/ =>  units list
+xxxxx/reader/grade/<grade_level>/ =>  units list
 
 
 /reader/grade/<grade_level>/unit/<unit_slug>/  readings list
@@ -43,9 +43,17 @@ urlpatterns = patterns(
         name='units'
     ),
 
-    url(r'^readings/(?P<category_slug>[-\w]+)$', ReadingsView.as_view(), name='readings'),
-    
-    url(r'^paragraph/(?P<category_slug>[-\w]+)$', ParagraphsView.as_view(), name='paragraphs'),
+    url(
+        r'^grade/(?P<grade_level>\d+)/unit/(?P<unit_slug>[-\w]+)$',
+        ReadingsView.as_view(),
+        name='readings'
+    ),
+
+    url(
+        r'^grade/(?P<grade_level>\d+)/unit/(?P<unit_slug>[-\w]+)/reading/(?P<reading_slug>[-\w]+)$',
+        ParagraphsView.as_view(),
+        name='paragraphs'
+    ),
 
     url(
         r'^sample/(?P<pk>\d+)$',

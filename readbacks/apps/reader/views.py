@@ -28,8 +28,27 @@ class ReadingsView(ListView):
     context_object_name = 'readings'
     template_name = 'reader/readings.html'
 
+    def get_queryset(self):
+        readings = Reading.objects.filter(unit__grade__level=self.kwargs['grade_level'], unit__slug=self.kwargs['unit_slug'])
+        return readings
+
+    def get_context_data(self, **kwargs):
+        context = super(ListView, self).get_context_data(**kwargs)
+        context['unit'] = Unit.objects.get(grade__level=self.kwargs['grade_level'], slug=self.kwargs['unit_slug'])
+        return context
+
 
 class ParagraphsView(ListView):
     model = Paragraph
     context_object_name = 'paragraphs'
     template_name = 'reader/paragraphs.html'
+
+    def get_queryset(self):
+        paragraphs = Paragraph.objects.filter(paragraph__text=self.kwargs['paragraph_text'])
+        return paragraphs
+
+    def get_context_data(self, **kwargs):
+        context = super(ListView, self).get_context_data(**kwargs)
+        context['paragraph_text'] = self.kwargs['paragraph_text']
+        return context
+

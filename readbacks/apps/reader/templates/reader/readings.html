@@ -4,11 +4,11 @@
 
 {% block main_content %}
 
-	<h1>Readings for Pets</h1>
+	<h1>Readings for {{ unit.name }}</h1>
 
 	<ul>
 		{% for reading in readings %}
-			<li><a href="{% url 'paragraphs' reading.pk %}"> {{ reading }}</a></li>
+			<li><a href="{% url 'paragraphs' unit_slug=reading.unit.slug grade_level=reading.unit.grade.level reading_slug=reading.slug %}"> {{ reading }}</a></li>
 
 		{% endfor %}
 	</ul>
