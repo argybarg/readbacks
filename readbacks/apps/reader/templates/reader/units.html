@@ -10,7 +10,7 @@
 		{% for unit in units %}
 			<li>
 				<a href="{% url 'readings' unit_slug=unit.slug grade_level=unit.grade.level %}"> 
-					{{ unit }}
+					{{ unit.slug }}
 				</a>
 			</li>
 			
