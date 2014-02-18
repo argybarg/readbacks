@@ -44,11 +44,13 @@ class ParagraphsView(ListView):
     template_name = 'reader/paragraphs.html'
 
     def get_queryset(self):
-        paragraphs = Paragraph.objects.filter(paragraph__text=self.kwargs['paragraph_text'])
+        paragraphs = Paragraph.objects.filter(reading__unit__grade__level=self.kwargs['grade_level'], reading__unit__slug=self.kwargs['unit_slug'], 
+        		reading__slug=self.kwargs['reading_slug'])
         return paragraphs
 
     def get_context_data(self, **kwargs):
         context = super(ListView, self).get_context_data(**kwargs)
-        context['paragraph_text'] = self.kwargs['paragraph_text']
+        context['reading'] = Reading.objects.get(unit__grade__level=self.kwargs['grade_level'], unit__slug=self.kwargs['unit_slug'],
+        		slug=self.kwargs['reading_slug'])
         return context
 
