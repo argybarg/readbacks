@@ -3,7 +3,7 @@
 {% block head %}
 
 <head>
-  {% block head_title %}Cats: Purring Pets, Passage 1{% endblock %}
+  {% block head_title %}{{ paragraph_reading_name }}, Paragraph {{ paragraph_id }}{% endblock %}
   <link type="text/css" href="skin/jplayer.pink.flag.css" rel="stylesheet" />
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
@@ -28,7 +28,7 @@
 
 {% block main_content %}
 <body>
-  <h1>Cats: Purring Pets, Passage 1</h1>
+  <h1>{{ paragraph.reading.name }}, Paragraph {{ paragraph_id }}</h1>
   <p>Cats are good pets. Like all pets, they need special care. Cats need food and water every day. Cats are meat eaters. They must have meat every day. Give your cat food made from beef, chicken, or fish. Cats do not need to drink milk. Give your cat fresh water.</p>
   <hr>
 <br>

@@ -4,11 +4,11 @@
 
 {% block main_content %}
 
-	<h1>Paragraphs for Cats: Purring Pets</h1>
+	<h1>Paragraphs for {{ reading.name }}</h1>
 
 	<ul>
 		{% for paragraph in paragraphs %}
-			<li><a href="{% url 'sample' unit_slug=paragraph.reading.unit.slug grade_level=paragraph.reading.unit.grade.level reading_slug=paragraph.reading.slug paragraph %}"> {{ paragraph.text }}</a></li>
+			<li><a href="{% url 'sample' unit_slug=paragraph.reading.unit.slug grade_level=paragraph.reading.unit.grade.level reading_slug=paragraph.reading.slug paragraph_id=paragraph.id %}"> {{ paragraph.text }}</a></li>
 
 		{% endfor %}
 	</ul>

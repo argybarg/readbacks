@@ -56,7 +56,7 @@ urlpatterns = patterns(
     ),
 
     url(
-        r'^sample/(?P<pk>\d+)$',
+        r'^grade/(?P<grade_level>\d+)/unit/(?P<unit_slug>[-\w]+)/reading/(?P<reading_slug>[-\w]+)/paragraph/(?P<paragraph_id>\d+)$',
         TemplateView.as_view(template_name='reader/sample.html'),
         name='sample'
     ),   
