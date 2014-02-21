@@ -39,8 +39,8 @@ class Reading(models.Model):
 
 class Paragraph(models.Model):
     reading = models.ForeignKey(Reading)
-    text = models.CharField(max_length=1000)   # TODO make a textfield           
-    mp3 = models.FilePathField(path="/media/", blank=True, null=True)              #as per MEDIA_URL in settings.py
+    text = models.CharField(max_length=1000)                            # TODO make a textfield           
+    mp3 = models.FilePathField(path="/media/", blank=True, null=True)   #as per MEDIA_URL in settings.py
 
     def __unicode__(self):
         short_text = truncatesmart(self.text, 50)

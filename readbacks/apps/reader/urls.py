@@ -1,11 +1,7 @@
 from django.conf.urls import patterns, url
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 from readbacks.apps.reader.models import Grade, Unit, Reading, Paragraph
-from readbacks.apps.reader.views import UnitsView, ReadingsView, ParagraphsView
-
-#  Do we change templateview to listview as seen in 2nd video?
-#  (see url listview.as_view commented out below)     
-#  NEXT ADD IN CODE in grades.html file for PAGINATION?
+from readbacks.apps.reader.views import UnitsView, ReadingsView, ParagraphsView, ParagraphDetailView
 
 
 """
@@ -56,8 +52,8 @@ urlpatterns = patterns(
     ),
 
     url(
-        r'^grade/(?P<grade_level>\d+)/unit/(?P<unit_slug>[-\w]+)/reading/(?P<reading_slug>[-\w]+)/paragraph/(?P<paragraph_id>\d+)$',
-        TemplateView.as_view(template_name='reader/sample.html'),
-        name='sample'
+        r'^paragraph/(?P<pk>\d+)$',                 #How does this differ from r'^paragraph/(?P<paragraph_id>\d+)$' 
+        ParagraphDetailView.as_view(),
+        name='paragraph_detail'
     ),   
 )

@@ -54,19 +54,11 @@ class ParagraphsView(ListView):
         		slug=self.kwargs['reading_slug'])
         return context
 
-class SampleView(DetailView):
+
+class ParagraphDetailView(DetailView):
     model = Paragraph
-    context_object_name = 'sample'
-    template_name = 'reader/sample.html'
+    context_object_name = 'paragraph'
+    template_name = 'reader/paragraph_detail.html'
 
-    '''def get_queryset(self):
-        paragraphs = Paragraph.objects.filter(reading__unit__grade__level=self.kwargs['grade_level'], reading__unit__slug=self.kwargs['unit_slug'], 
-        		reading__slug=self.kwargs['reading_slug'])
-        return paragraphs'''
 
-    def get_context_data(self, **kwargs):
-        context = super(DetailView, self).get_context_data(**kwargs)
-        context['paragraph'] = Paragraph.objects.get(reading__unit__grade__level=self.kwargs['grade_level'], reading__unit__slug=self.kwargs['unit_slug'],
-        		reading__slug=self.kwargs['reading_slug'], paragraph__id=self.kwargs['paragraph_id'])
-        return context
 
