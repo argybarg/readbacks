@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 from autoslug import AutoSlugField
 
@@ -46,6 +47,9 @@ class Paragraph(models.Model):
         short_text = truncatesmart(self.text, 50)
         return '%s' % short_text   
 
+    def get_absolute_url(self):
+        url = reverse('paragraph_detail', kwargs={'pk': self.pk })
+        return "%s" % url
 
 #Alternate model below. Might it be simpler just to have everything in one table? 
 #Or will that impact efficiency?
