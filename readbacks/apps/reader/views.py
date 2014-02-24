@@ -35,6 +35,7 @@ class ReadingsView(ListView):
     def get_context_data(self, **kwargs):
         context = super(ListView, self).get_context_data(**kwargs)
         context['unit'] = Unit.objects.get(grade__level=self.kwargs['grade_level'], slug=self.kwargs['unit_slug'])
+        context['grade_level'] = self.kwargs['grade_level']
         return context
 
 
@@ -52,6 +53,9 @@ class ParagraphsView(ListView):
         context = super(ListView, self).get_context_data(**kwargs)
         context['reading'] = Reading.objects.get(unit__grade__level=self.kwargs['grade_level'], unit__slug=self.kwargs['unit_slug'],
         		slug=self.kwargs['reading_slug'])
+        context['grade_level'] = self.kwargs['grade_level']
+        context['unit_slug'] = self.kwargs['unit_slug']
+
         return context
 
 

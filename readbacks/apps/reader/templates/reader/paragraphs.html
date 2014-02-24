@@ -9,11 +9,13 @@
 		*
 		<a href="{% url 'grades' %}">Grades</a>
 		*
-		<a href="{{ unit.get_absolute_url }}">Units</a>
+		<a href="{% url 'units' grade_level %}">Grade {{ grade_level }}</a>
 		*
-		<a href="{{ reading.get_absolute_url }}">Readings</a>
+		<a href="{% url 'readings' unit_slug=unit_slug grade_level=grade_level %}">{{ reading.unit.slug }}  </a>
 		*
-		<a href="{{ paragraph.get_absolute_url }}">Paragraphs</a>
+		{{ reading.slug }}
+
+
 	</div>
 
 	<h1>Paragraphs for {{ reading.name }}</h1>

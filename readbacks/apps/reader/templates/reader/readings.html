@@ -9,9 +9,9 @@
 		*
 		<a href="{% url 'grades' %}">Grades</a>
 		*
-		<a href="{{ unit.get_absolute_url }}">Units</a>
+		<a href="{% url 'units' grade_level %}">Grade {{ grade_level }}</a>
 		*
-		<a href="{{ reading.get_absolute_url }}">Readings</a>
+		{{ unit.name }}
 	</div>
 
 	<h1>Readings for {{ unit.name }}</h1>
