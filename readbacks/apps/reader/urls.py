@@ -52,7 +52,7 @@ urlpatterns = patterns(
     ),
 
     url(
-        r'^paragraph/(?P<pk>\d+)$',                 #How does this differ from r'^paragraph/(?P<paragraph_id>\d+)$' 
+        r'^paragraph/(?P<pk>\d+)$', 
         ParagraphDetailView.as_view(),
         name='paragraph_detail'
     ),   

@@ -12,6 +12,10 @@ class Grade(models.Model):
     def __unicode__(self):
         return 'Grade %s' % self.level
 
+    def get_absolute_url(self):
+        url = reverse('grades')
+        return "%s" % url
+
     #class Admin: pass
 
 
@@ -26,6 +30,10 @@ class Unit(models.Model):
     def __unicode__(self):
         return '%s %s' % (self.grade, self.name)
 
+    def get_absolute_url(self):
+        url = reverse('units', kwargs={'grade_level': grade.level })
+        return "%s" % url
+
 
 class Reading(models.Model):
     unit = models.ForeignKey(Unit)
@@ -34,6 +42,10 @@ class Reading(models.Model):
 
     def __unicode__(self):
         return '%s,  %s' % (self.unit, self.name)
+
+    def get_absolute_url(self):
+        url = reverse('readings', kwargs={'grade_level': unit.grade.level, 'unit_slug': unit.slug })
+        return "%s" % url
 
     #class Admin: pass
 
@@ -48,8 +60,10 @@ class Paragraph(models.Model):
         return '%s' % short_text   
 
     def get_absolute_url(self):
-        url = reverse('paragraph_detail', kwargs={'pk': self.pk })
+        url = reverse('paragraphs', kwargs={'grade_level': reading.unit.grade.level, 'unit_slug': reading.unit.slug, 'reading_slug':reading.slug })
         return "%s" % url
+
+
 
 #Alternate model below. Might it be simpler just to have everything in one table? 
 #Or will that impact efficiency?
