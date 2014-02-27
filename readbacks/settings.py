@@ -38,6 +38,7 @@ INSTALLED_APPS = (
    'django.contrib.staticfiles',
 
     #project apps
+    'bootstrap3',
     'readbacks.apps.home',
     'readbacks.apps.reader',
     'readbacks.apps.common',
