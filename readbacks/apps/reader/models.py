@@ -34,6 +34,9 @@ class Unit(models.Model):
         url = reverse('units', kwargs={'grade_level': grade.level })
         return "%s" % url
 
+    def readings(self):
+        return Reading.objects.filter(unit=self)
+
 
 class Reading(models.Model):
     unit = models.ForeignKey(Unit)
@@ -46,6 +49,9 @@ class Reading(models.Model):
     def get_absolute_url(self):
         url = reverse('readings', kwargs={'grade_level': unit.grade.level, 'unit_slug': unit.slug })
         return "%s" % url
+
+    def paragraphs(self):
+        return Paragraph.objects.filter(reading=self)
 
     #class Admin: pass
 
@@ -62,6 +68,8 @@ class Paragraph(models.Model):
     def get_absolute_url(self):
         url = reverse('paragraphs', kwargs={'grade_level': reading.unit.grade.level, 'unit_slug': reading.unit.slug, 'reading_slug':reading.slug })
         return "%s" % url
+
+
 
 
 

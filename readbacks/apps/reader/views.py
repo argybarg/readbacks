@@ -66,3 +66,22 @@ class ParagraphDetailView(DetailView):
 
 
 
+
+"""
+class Nav_PagesView(ListView):
+    model = Unit
+    context_object_name = 'nav_pages'
+    template_name = 'reader/nav_page.html'
+
+    def get_queryset(self):
+        grades = ["Level 1", "Level 2", "Level 3", "Level 4", "Level 5"]
+        units = Unit.objects.filter(grade__level=self.kwargs['grade_level'])
+        nav_pages = [grades, units]
+        return nav_pages
+
+    def get_context_data(self, **kwargs):
+        context = super(ListView, self).get_context_data(**kwargs)
+        context['grade_level'] = self.kwargs['grade_level']
+        return context
+"""
+

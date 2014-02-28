@@ -2,32 +2,36 @@
 {% load staticfiles bootstrap3 %}
 
 
-{% block head_title %}Units{% endblock %}
+{% block head_title %} Level {{ grade_level }} Units {% endblock %}
 
 {% block main_content %}
 
-	<div class="breadcrumbs">
-		<a href="{% url 'home' %}">Home</a>
-		*
-		<a href="{% url 'grades' %}">Grades</a>
-		*
-		Grade {{ grade_level}}
-	</div>
 
-
-	<h1>Units for Grade {{ grade_level }}</h1>
+	<h1>Level {{ grade_level }} Units</h1>
 
 	<ul>
 		{% for unit in units %}
 			<li>
-				<a href="{% url 'readings' unit_slug=unit.slug grade_level=unit.grade.level %}"> 
-					{{ unit.slug }}
-				</a>
+				{{ unit.slug }}
+				<ul>
+					{% for reading in unit.reading_set.all %}
+						<li>
+							{{ reading.name }}
+							<ul>
+								{% for paragraph in reading.paragraph_set.all %}
+									<li>
+										{{ paragraph }}
+									</li>
+								{% endfor %}
+							</ul>
+						</li>
+					{% endfor %}
+				</ul>
 			</li>
 			
-
 		{% endfor %}
 	</ul>
+	
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading">
