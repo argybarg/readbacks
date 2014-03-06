@@ -66,8 +66,107 @@
     "model": "reader.unit", 
     "fields": {
         "grade": 2, 
+        "name": "Books", 
+        "slug": "books"
+    }
+},
+{
+    "pk": 5, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 2, 
+        "name": "TV", 
+        "slug": "tv"
+    }
+},
+{
+    "pk": 6, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 2, 
+        "name": "Winter Holidays", 
+        "slug": "winter-holidays"
+    }
+},
+{
+    "pk": 7, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 3, 
+        "name": "Cuss Words", 
+        "slug": "cuss-words"
+    }
+},
+{
+    "pk": 8, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 3, 
+        "name": "World History", 
+        "slug": "world-history"
+    }
+},
+{
+    "pk": 9, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 3, 
+        "name": "Lunch", 
+        "slug": "lunch"
+    }
+},
+{
+    "pk": 10, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 4, 
         "name": "Quantum Thermodynamics", 
         "slug": "quantum-thermodynamics"
+    }
+},
+{
+    "pk": 11, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 4, 
+        "name": "Don't Tell The Children", 
+        "slug": "dont-tell-the-children"
+    }
+},
+{
+    "pk": 12, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 4, 
+        "name": "Postmodern Philosophies", 
+        "slug": "postmodern-philosophies"
+    }
+},
+{
+    "pk": 13, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 5, 
+        "name": "Amusement Parks", 
+        "slug": "amusement-parks"
+    }
+},
+{
+    "pk": 14, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 5, 
+        "name": "The Future", 
+        "slug": "the-future"
+    }
+},
+{
+    "pk": 15, 
+    "model": "reader.unit", 
+    "fields": {
+        "grade": 5, 
+        "name": "Death", 
+        "slug": "death"
     }
 },
 {
@@ -113,6 +212,366 @@
         "name": "Fish: Water Pets", 
         "unit": 1, 
         "slug": "fish-water-pets"
+    }
+},
+{
+    "pk": 6, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Why Is It Blue?", 
+        "unit": 2, 
+        "slug": "why-is-it-blue"
+    }
+},
+{
+    "pk": 7, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "It's Falling!", 
+        "unit": 2, 
+        "slug": "its-falling"
+    }
+},
+{
+    "pk": 8, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Be Very Afraid", 
+        "unit": 3, 
+        "slug": "be-very-afraid"
+    }
+},
+{
+    "pk": 9, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Duck And Cover", 
+        "unit": 3, 
+        "slug": "duck-and-cover"
+    }
+},
+{
+    "pk": 10, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "What Is A Book?", 
+        "unit": 4, 
+        "slug": "what-is-a-book"
+    }
+},
+{
+    "pk": 11, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "'Ulysses' And Other Great Children's Books", 
+        "unit": 4, 
+        "slug": "ulysses-and-other-great-childrens-books"
+    }
+},
+{
+    "pk": 12, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Let's Have A Book-Burning Party!", 
+        "unit": 4, 
+        "slug": "lets-have-a-book-burning-party"
+    }
+},
+{
+    "pk": 13, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "So Much Better Than Reading!", 
+        "unit": 5, 
+        "slug": "so-much-better-than-reading"
+    }
+},
+{
+    "pk": 14, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "If It's On TV It Must Be True", 
+        "unit": 5, 
+        "slug": "if-its-on-tv-it-must-be-true"
+    }
+},
+{
+    "pk": 15, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Is Five Hours A Day Enough?", 
+        "unit": 5, 
+        "slug": "is-five-hours-a-day-enough"
+    }
+},
+{
+    "pk": 16, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "The Feast Of Saturnalia", 
+        "unit": 6, 
+        "slug": "the-feast-of-saturnalia"
+    }
+},
+{
+    "pk": 17, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Let's All Sing The Dreidel Song!", 
+        "unit": 6, 
+        "slug": "lets-all-sing-the-dreidel-song"
+    }
+},
+{
+    "pk": 18, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Santa Claus Is NOT Real :(", 
+        "unit": 6, 
+        "slug": "santa-claus-is-not-real"
+    }
+},
+{
+    "pk": 19, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Some Cool New Words For You!", 
+        "unit": 7, 
+        "slug": "some-cool-new-words-for-you"
+    }
+},
+{
+    "pk": 20, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Why Is Mommy Angry?", 
+        "unit": 7, 
+        "slug": "why-is-mommy-angry"
+    }
+},
+{
+    "pk": 21, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Having Fun At Church", 
+        "unit": 7, 
+        "slug": "having-fun-at-church"
+    }
+},
+{
+    "pk": 22, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "The Reeks And Gromans", 
+        "unit": 8, 
+        "slug": "the-reeks-and-gromans"
+    }
+},
+{
+    "pk": 23, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "1066 And All That", 
+        "unit": 8, 
+        "slug": "1066-and-all-that"
+    }
+},
+{
+    "pk": 24, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Wars Galore", 
+        "unit": 8, 
+        "slug": "wars-galore"
+    }
+},
+{
+    "pk": 25, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Tater Tots", 
+        "unit": 9, 
+        "slug": "tater-tots"
+    }
+},
+{
+    "pk": 26, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Mystery Meat", 
+        "unit": 9, 
+        "slug": "mystery-meat"
+    }
+},
+{
+    "pk": 27, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "McDonald's And Other Health Food Restaurants", 
+        "unit": 9, 
+        "slug": "mcdonalds-and-other-fast-food-restaurants"
+    }
+},
+{
+    "pk": 28, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Equilibrium Properties of Macroscopic Objects", 
+        "unit": 10, 
+        "slug": "equilibrium-properties-of-macroscopic-objects"
+    }
+},
+{
+    "pk": 29, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "The Gibbs Canonical Ensemble", 
+        "unit": 10, 
+        "slug": "the-gibbs-canonical-ensemble"
+    }
+},
+{
+    "pk": 30, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "This Is Your Density", 
+        "unit": 10, 
+        "slug": "this-is-your-density"
+    }
+},
+{
+    "pk": 31, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Won't SOMEBODY Think of YOU?!?", 
+        "unit": 11, 
+        "slug": "wont-somebody-think-of-you"
+    }
+},
+{
+    "pk": 32, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "You May Be Adopted If...", 
+        "unit": 11, 
+        "slug": "you-may-be-adopted-if"
+    }
+},
+{
+    "pk": 33, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "How To Hack Dad's iPhone", 
+        "unit": 11, 
+        "slug": "how-to-hack-dads-iphone"
+    }
+},
+{
+    "pk": 34, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Words Can Mean Whatever You Say They Mean", 
+        "unit": 12, 
+        "slug": "words-can-mean-whatever-you-say-they-mean"
+    }
+},
+{
+    "pk": 35, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Deconstructing Your English Teacher", 
+        "unit": 12, 
+        "slug": "deconstructing-your-english-teacher"
+    }
+},
+{
+    "pk": 36, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Thus Spake Justin Bieber", 
+        "unit": 12, 
+        "slug": "thus-spake-justin-bieber"
+    }
+},
+{
+    "pk": 37, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Rock Out In Branson, MO!", 
+        "unit": 13, 
+        "slug": "rock-out-in-branson-mo"
+    }
+},
+{
+    "pk": 38, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Best Disneyworld Rides For Barfing", 
+        "unit": 13, 
+        "slug": "best-disneyworld-rides-for-barfing"
+    }
+},
+{
+    "pk": 39, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Best Disneyworld Foods For Barfing", 
+        "unit": 13, 
+        "slug": "best-disneyworld-foods-for-barfing"
+    }
+},
+{
+    "pk": 40, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Your Future Career In Retail", 
+        "unit": 14, 
+        "slug": "your-future-career-in-retail"
+    }
+},
+{
+    "pk": 41, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "One Day You Too Will Be Old and Feeble", 
+        "unit": 14, 
+        "slug": "one-day-you-too-will-be-old-and-feeble"
+    }
+},
+{
+    "pk": 42, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Entropy and the Heat Death Of The Universe", 
+        "unit": 14, 
+        "slug": "entropy-and-the-heat-death-of-the-universe"
+    }
+},
+{
+    "pk": 43, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Life Is Tough, And Then...", 
+        "unit": 15, 
+        "slug": "life-is-tough-and-then"
+    }
+},
+{
+    "pk": 44, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Famous Kids Who Died", 
+        "unit": 15, 
+        "slug": "famous-kids-who-died"
+    }
+},
+{
+    "pk": 45, 
+    "model": "reader.reading", 
+    "fields": {
+        "name": "Plan Your Own Funeral!", 
+        "unit": 15, 
+        "slug": "plan-your-own-funeral"
     }
 },
 {
