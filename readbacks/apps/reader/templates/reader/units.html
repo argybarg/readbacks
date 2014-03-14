@@ -13,7 +13,7 @@
     <div class="panel-group" id="accordion">
         {% for unit in units %}			
           <div class="panel panel-default">
-            <div class="panel-heading">
+            <div id="accordion-head" class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse_{{ unit.id }}">
                     {{ unit.name }}
@@ -21,11 +21,11 @@
               </h4>
             </div>
               <div id="collapse_{{ unit.id }}" class="panel-collapse collapse">
-                <div class="panel-body">
+                <div id="accordion-body" class="panel-body">
                     <div class="panel-group" id="accordion2">
                         {% for reading in unit.reading_set.all %}
                           <div class="panel panel-default">
-                            <div class="panel-heading">
+                            <div id="accordion2-head" class="panel-heading">
                               <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2_{{ reading.id }}">
                                     {{ reading.name }}
@@ -34,9 +34,9 @@
                               </h4>
                             </div>
                               <div id="collapse2_{{ reading.id }}" class="panel-collapse collapse">
-                                <div class="panel-body">
+                                <div id="accordion2-body" class="panel-body">
                                     {% for paragraph in reading.paragraph_set.all %}
-			                            <li><a href="{% url 'paragraph_detail' paragraph.id %}"> 
+			                            <li><a href="{% url 'paragraph_detail' paragraph.id %}" id="paragraph-link"> 
 			                              {{ paragraph }}</a></li>
                                         <br>
                                     {% endfor %}

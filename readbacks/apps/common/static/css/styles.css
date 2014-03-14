@@ -1,4 +1,61 @@
 body {
-	color: green;
+	color: maroon;
+	font-family: "Verdana", sans-serif;
 
+}
+
+.panel-title {
+	font-family: "Chalkboard", cursive;
+	font-size: 18pt;
+	font-weight: bold;
+	font-color: #228B22;
+}
+
+#readback-text {
+	font-family: "Chalkboard", cursive;
+	font-size: 36pt;
+	color: green;
+	border: 5px outset maroon;
+	padding: 1cm;
+}
+
+#accordion-head {
+	background-color: #98FB98;
+	border-color: #228B22;
+	border-width: 2px;
+}
+
+#accordion-body {
+	background-color: #FFFACD;
+	border: none;
+	border-color: #228B22;
+	border-width: 2px;
+}
+
+#accordion2-head {
+	background-color: #FFA07A;
+	border: none;
+	border-color: #B22222;
+	border-width: 2px;
+}
+
+#accordion2-body {
+	background-color: #FFB6C1;
+	border: none;
+	border-color: #B22222;
+	border-width: 2px;
+}
+
+#paragraph-link:link {
+	font-family: "Chalkboard", cursive;
+	font-size: 12pt;
+	text-decoration: none;
+	font-color: #B22222;
+}
+
+#paragraph-link:visited {
+	font-family: "Chalkboard", cursive;
+	font-size: 12pt;
+	text-decoration: none;
+	font-color: maroon;
 }
