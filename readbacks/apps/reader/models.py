@@ -16,6 +16,9 @@ class Grade(models.Model):
         url = reverse('grades')
         return "%s" % url
 
+    def image_path(self):
+        return "reader/%s.jpg" % self.level
+
     #class Admin: pass
 
 

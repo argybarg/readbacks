@@ -9,11 +9,12 @@
 <br>
 	{% for grade in grades %}
 		<a href="{% url 'units' grade.level %}">Level {{ grade.level }}
-		  <br><img src="{% static 'reader/1.jpg' %}"
+		  <br><img src="{% static grade.image_path %}"
 		        height="200" width="200" alt="Level {{ grade.level }}"
 		      />
+
 		  &nbsp; &nbsp; &nbsp; 
-		</a>
+		</a>url here: {% static 'reader/{{ grade.level }}.jpg' %} 
 
 	{% endfor %}
 
