@@ -4,6 +4,13 @@ body {
 
 }
 
+.level-icons img {
+	border: 2px solid maroon;
+	padding: 20px;
+	margin: 1cm;
+	background-color: #87CEFA;
+}
+
 .panel-title {
 	font-family: "Chalkboard", cursive;
 	font-size: 18pt;

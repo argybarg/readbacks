@@ -5,19 +5,19 @@
 
 {% block main_content %}
 
-<h1><center>Click On Your Reading Group</center></h1>
-<br>
+<center>
+  <h1>Click On Your Reading Group</h1>
+  <br>
+  <div class="level-icons">
 	{% for grade in grades %}
-		<a href="{% url 'units' grade.level %}">Level {{ grade.level }}
-		  <br><img src="{% static grade.image_path %}"
-		        height="200" width="200" alt="Level {{ grade.level }}"
-		      />
-
-		  &nbsp; &nbsp; &nbsp; 
-		</a>url here: {% static 'reader/{{ grade.level }}.jpg' %} 
-
+		<a href="{% url 'units' grade.level %}">
+		  <img src="{% static grade.image_path %}"
+		    height="240" width="240" alt="Level {{ grade.level }}" title="Level {{ grade.level }}"
+		  /> 
+		</a>
 	{% endfor %}
-
+  </div>
+</center>
 
 {% endblock %}
 
