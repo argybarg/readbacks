@@ -40,6 +40,9 @@ class Unit(models.Model):
     def readings(self):
         return Reading.objects.filter(unit=self)
 
+    def paragraphs(self_readings):
+        return Paragraph.objects.filter(reading=self.readings)
+
 
 class Reading(models.Model):
     unit = models.ForeignKey(Unit)
