@@ -1,14 +1,44 @@
+/* font style defaults */
 body {
 	color: maroon;
 	font-family: "Verdana", sans-serif;
 
 }
 
+/* styling for level-select page */
 .level-icons img {
 	border: 2px solid maroon;
 	padding: 20px;
 	margin: 1cm;
-	background-color: #87CEFA;
+	background-color: #CCFFFF;
+}
+
+/* styling for accordions */
+#accordion-head {
+	background-color: #CCFF99;
+	border-color: #228B22;
+	border-width: 2px;
+}
+
+#accordion-body {
+	background-color: #FFFFCC;
+	border: none;
+	border-color: #228B22;
+	border-width: 2px;
+}
+
+#accordion2-head {
+	background-color: #FFCC99;
+	border: none;
+	border-color: #B22222;
+	border-width: 2px;
+}
+
+#accordion2-body {
+	background-color: #FFCCCC;
+	border: none;
+	border-color: #B22222;
+	border-width: 2px;
 }
 
 .panel-title {
@@ -18,51 +48,54 @@ body {
 	font-color: #228B22;
 }
 
+a.paragraph-link:link {
+	font-family: "Chalkboard", cursive;
+	font-size: 12pt;
+	text-decoration: none;
+	color: black;
+}
+
+a.paragraph-link:hover {
+	font-size: 14pt;
+	color: #B22222;
+}
+
+/* styling for modal window */
+.modal-header {
+	background-color: #CCCCFF;
+	border-style:solid;
+	border-bottom-width:4px;
+	border-color: white;
+}
+
+.modal-footer {
+	background-color: #CCCCFF;
+	border-style:solid;
+	border-color: white;
+}
+
+.modal-body {
+	background-color: #CCFFFF;
+	border-style:solid;
+	border-color: white;
+}
+
+.modal-bannerpic {
+	border: 1px solid purple;
+	padding: none;
+}
+
+@media screen and (min-width: 768px) {
+    .custom-class {
+        width: 80%; /* either % (e.g. 60%) or px (400px) */
+    }
+}
+
 #readback-text {
 	font-family: "Chalkboard", cursive;
-	font-size: 36pt;
-	color: green;
-	border: 5px outset maroon;
-	padding: 1cm;
-}
-
-#accordion-head {
-	background-color: #98FB98;
-	border-color: #228B22;
-	border-width: 2px;
-}
-
-#accordion-body {
-	background-color: #FFFACD;
+	font-size: 28pt;
+	color: #660000;
 	border: none;
-	border-color: #228B22;
-	border-width: 2px;
+	padding: none;
 }
 
-#accordion2-head {
-	background-color: #FFA07A;
-	border: none;
-	border-color: #B22222;
-	border-width: 2px;
-}
-
-#accordion2-body {
-	background-color: #FFB6C1;
-	border: none;
-	border-color: #B22222;
-	border-width: 2px;
-}
-
-#paragraph-link:link {
-	font-family: "Chalkboard", cursive;
-	font-size: 12pt;
-	text-decoration: none;
-	font-color: #B22222;
-}
-
-#paragraph-link:visited {
-	font-family: "Chalkboard", cursive;
-	font-size: 12pt;
-	text-decoration: none;
-	font-color: maroon;
-}
