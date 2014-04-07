@@ -1,13 +1,14 @@
 {% extends 'common/base.html' %}
 {% load staticfiles bootstrap3 %}
 
-
 {% block head_title %} Level {{ grade_level }} Units {% endblock %}
 
 {% block main_content %}
 
-
-
+  {% if user.is_staff %}Staff  <br />
+  {% else%}
+  NOT STAFF
+{% endif %}
   <h1>Level {{ grade_level }} Units</h1>
   <h3>Click on a unit name to see its readings</h3>
   <h4>Click on a reading title to see its paragraphs</h4>
@@ -73,8 +74,8 @@
               </div>
           </div>
         {% endfor %}
+        {% if user.is_staff %}<a href="#">Add a Unit</a>{% endif %}
+
     </div>
 
 {% endblock %}
-
-
