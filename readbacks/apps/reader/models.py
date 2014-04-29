@@ -34,7 +34,7 @@ class Unit(models.Model):
         return '%s %s' % (self.grade, self.name)
 
     def get_absolute_url(self):
-        url = reverse('units', kwargs={'grade_level': grade.level })
+        url = reverse('home')
         return "%s" % url
 
     def readings(self):

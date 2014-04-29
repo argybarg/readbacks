@@ -75,10 +75,58 @@
           </div>
         {% endfor %}
         {% if user.is_staff %}
-          <FORM ACTION="reader/cgitest.py">
-            UNIT NAME: <INPUT name="new-unit">
-            <INPUT TYPE=SUBMIT VALUE="Submit">
-          </FORM>
+          <h1>Create a new Unit</h1>
+          <form action="{% url 'unit_add' %}" method="POST" >
+              {% csrf_token %}
+
+<p>
+
+    <label for="id_grade"></label>
+    <select id="id_grade" name="grade">
+        <option selected="selected" value="">
+
+            ---------
+
+        </option>
+        <option value="1">
+
+            Grade 1
+
+        </option>
+        <option value="2">
+
+            Grade 2
+
+        </option>
+        <option value="3">
+
+            Grade 3
+
+        </option>
+        <option value="4">
+
+            Grade 4
+
+        </option>
+        <option value="5">
+
+            Grade 5
+
+        </option>
+    </select>
+
+</p>
+<p>
+
+    <label for="id_name">
+
+        Name:
+
+    </label>
+    <input id="id_name" type="text" name="name" maxlength="100"></input>
+
+</p>              <input type="submit" value="Create">
+          </form>
         {% endif %}
 
     </div>
