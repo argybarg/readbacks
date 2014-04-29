@@ -2,6 +2,7 @@ from django.conf.urls import patterns, url
 from django.views.generic import TemplateView, ListView, DetailView
 from readbacks.apps.reader.models import Grade, Unit, Reading, Paragraph
 from readbacks.apps.reader.views import UnitsView, ReadingsView, ParagraphsView, ParagraphDetailView
+from readbacks.apps.reader.views import UnitsCreate, UnitsUpdate, UnitsDelete
 
 
 """
@@ -55,5 +56,17 @@ urlpatterns = patterns(
         r'^paragraph/(?P<pk>\d+)$', 
         ParagraphDetailView.as_view(),
         name='paragraph_detail'
-    ),   
+    ),
+
+    url(
+        r'unit/add/$', UnitsCreate.as_view(), name='unit_add'
+    ),
+
+    url(
+        r'unit/(?P<pk>\d+)/$', UnitsUpdate.as_view(), name='unit_update'
+    ),
+
+    url(
+        r'unit/(?P<pk>\d+)/delete/$', UnitsDelete.as_view(), name='unit_delete'
+    ),  
 )

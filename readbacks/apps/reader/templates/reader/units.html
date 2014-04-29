@@ -74,7 +74,12 @@
               </div>
           </div>
         {% endfor %}
-        {% if user.is_staff %}<a href="#">Add a Unit</a>{% endif %}
+        {% if user.is_staff %}
+          <FORM ACTION="reader/cgitest.py">
+            UNIT NAME: <INPUT name="new-unit">
+            <INPUT TYPE=SUBMIT VALUE="Submit">
+          </FORM>
+        {% endif %}
 
     </div>
 
