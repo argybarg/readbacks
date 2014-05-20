@@ -79,56 +79,95 @@
           <form action="{% url 'unit_add' %}" method="POST" >
               {% csrf_token %}
 
-<p>
+            <p>
 
-    <label for="id_grade"></label>
-    <select id="id_grade" name="grade">
-        <option selected="selected" value="">
+                <label for="id_unit"></label>
+                <select id="id_unit" name="unit">
+                    <option selected="selected" value="">
 
-            ---------
+                        ---------
 
-        </option>
-        <option value="1">
+                    </option>
+                    <option value="1">
 
-            Grade 1
+                        Grade 1
 
-        </option>
-        <option value="2">
+                    </option>
+                    <option value="2">
 
-            Grade 2
+                        Grade 2
 
-        </option>
-        <option value="3">
+                    </option>
+                    <option value="3">
 
-            Grade 3
+                        Grade 3
 
-        </option>
-        <option value="4">
+                    </option>
+                    <option value="4">
 
-            Grade 4
+                        Grade 4
 
-        </option>
-        <option value="5">
+                    </option>
+                    <option value="5">
 
-            Grade 5
+                        Grade 5
 
-        </option>
-    </select>
+                    </option>
+                </select>
 
-</p>
-<p>
+              </p>
+              <p>
 
-    <label for="id_name">
+                <label for="id_name">
 
-        Name:
+                  Name:
 
-    </label>
-    <input id="id_name" type="text" name="name" maxlength="100"></input>
+                </label>
+                <input id="id_name" type="text" name="name" maxlength="100"></input>
 
-</p>              <input type="submit" value="Create">
+              </p>   
+              <input type="submit" value="Create">
           </form>
+
+
+
+          <h1>Create a new Reading</h1>
+          <form action="{% url 'reading_add' %}" method="POST" >
+              {% csrf_token %}
+
+          <p>
+
+              <label for="id_grade"></label>
+              <select id="id_grade" name="grade">
+                  <option selected="selected" value="">
+
+                      ---------
+
+                  </option>
+
+                  {% for unit in units %} 
+                    <option value="{{ unit.name }}">
+                      {{ unit.name }}
+                    </option>
+                  {% endfor %}
+
+              </select>
+
+          </p>
+          <p>
+
+              <label for="id_name_r">
+
+                  Name:
+
+              </label>
+              <input id="id_name_r" type="text" name="name_r" maxlength="200"></input>
+
+          </p>              <input type="submit" value="Create">
+                    </form>
         {% endif %}
 
     </div>
 
 {% endblock %}
+

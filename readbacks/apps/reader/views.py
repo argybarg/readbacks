@@ -6,7 +6,7 @@ from django.core.urlresolvers import reverse_lazy
 import json
 from django.http import HttpResponse
 
-from .forms import UnitForm
+from .forms import UnitForm, ReadingForm
 
 #class GradesView(ListView):
 #   model = Grade
@@ -118,6 +118,24 @@ class UnitUpdate(UpdateView):
 class UnitDelete(DeleteView):
     model = Unit
     success_url = reverse_lazy('units')
+
+
+class ReadingCreate(CreateView):
+    form_class = ReadingForm
+    template_name = 'reader/reading_add.html'
+    success_url = reverse_lazy('home')
+
+    class Meta:
+        model = Reading
+
+
+class ReadingUpdate(UpdateView):
+    model = Reading
+
+
+class ReadingDelete(DeleteView):
+    model = Reading
+    success_url = reverse_lazy('readings')
 
 """
 class Nav_PagesView(ListView):

@@ -53,7 +53,7 @@ class Reading(models.Model):
         return '%s,  %s' % (self.unit, self.name)
 
     def get_absolute_url(self):
-        url = reverse('readings', kwargs={'grade_level': unit.grade.level, 'unit_slug': unit.slug })
+        url = reverse('home')
         return "%s" % url
 
     def paragraphs(self):
