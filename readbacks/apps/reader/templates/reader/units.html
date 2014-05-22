@@ -79,42 +79,9 @@
           <form action="{% url 'unit_add' %}" method="POST" >
               {% csrf_token %}
 
+
             <p>
-
-                <label for="id_unit"></label>
-                <select id="id_unit" name="unit">
-                    <option selected="selected" value="">
-
-                        ---------
-
-                    </option>
-                    <option value="1">
-
-                        Grade 1
-
-                    </option>
-                    <option value="2">
-
-                        Grade 2
-
-                    </option>
-                    <option value="3">
-
-                        Grade 3
-
-                    </option>
-                    <option value="4">
-
-                        Grade 4
-
-                    </option>
-                    <option value="5">
-
-                        Grade 5
-
-                    </option>
-                </select>
-
+                <input id="id_grade" type="hidden" name="grade" maxlength="100" value="{{ grade_level }}"></input>
               </p>
               <p>
 
@@ -131,7 +98,7 @@
 
 
 
-          <h1>Create a new Reading</h1>
+<!--           <h1>Create a new Reading</h1>
           <form action="{% url 'reading_add' %}" method="POST" >
               {% csrf_token %}
 
@@ -165,7 +132,7 @@
 
           </p>              <input type="submit" value="Create">
                     </form>
-        {% endif %}
+ -->        {% endif %}
 
     </div>
 

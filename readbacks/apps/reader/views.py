@@ -3,6 +3,8 @@ from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from readbacks.apps.reader.models import Grade, Unit, Reading, Paragraph
 from django.core.urlresolvers import reverse_lazy
+from django.core.urlresolvers import reverse
+
 import json
 from django.http import HttpResponse
 
@@ -105,7 +107,11 @@ class AjaxableResponseMixin(object):
 class UnitCreate(CreateView):
     form_class = UnitForm
     template_name = 'reader/unit_add.html'
-    success_url = reverse_lazy('home')
+
+    def get_success_url(self):
+        # import pdb; pdb.set_trace();
+        kwargs = { 'grade_level': self.object.grade.level }
+        return reverse('units', kwargs=kwargs)
 
     class Meta:
         model = Unit
